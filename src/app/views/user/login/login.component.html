@@ -1,0 +1,185 @@
+<!--&lt;!&ndash;&lt;!&ndash; <input [(ngModel)]="username"&ndash;&gt;-->
+       <!--&lt;!&ndash;placeholder="alice"/>&ndash;&gt;-->
+<!--&lt;!&ndash;<br/>&ndash;&gt;-->
+<!--&lt;!&ndash;<label>Password</label>&ndash;&gt;-->
+<!--&lt;!&ndash;<input [(ngModel)]="password"&ndash;&gt;-->
+       <!--&lt;!&ndash;type="password"&ndash;&gt;-->
+       <!--&lt;!&ndash;placeholder="1234###"/>&ndash;&gt;-->
+<!--&lt;!&ndash;<br/>&ndash;&gt;-->
+<!--&lt;!&ndash;<button (click)="login(username, password)">Login</button> &ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;<div class="container">&ndash;&gt;-->
+  <!--&lt;!&ndash;<h1>Login</h1>&ndash;&gt;-->
+
+  <!--&lt;!&ndash;&lt;!&ndash; generate error message when there are input errors &ndash;&gt;&ndash;&gt;-->
+  <!--&lt;!&ndash;<div *ngIf="errorFlag" class="alert alert-danger">&ndash;&gt;-->
+    <!--&lt;!&ndash;{{errorMsg}}&ndash;&gt;-->
+  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+  <!--&lt;!&ndash;&lt;!&ndash; using angular form (ngForm) instead of traditional <input> tag &ndash;&gt;&ndash;&gt;-->
+  <!--&lt;!&ndash;<form (ngSubmit) = "login()" #f="ngForm">&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<label for="username">Username</label>&ndash;&gt;-->
+    <!--&lt;!&ndash;<input placeholder="username" name="username" type="text" class="form-control" id="username" ngModel required #username="ngModel"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<span class="help-block" *ngIf="!username.valid && username.touched">&ndash;&gt;-->
+      <!--&lt;!&ndash;Please enter username!&ndash;&gt;-->
+    <!--&lt;!&ndash;</span>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<label for="password">Password</label>&ndash;&gt;-->
+    <!--&lt;!&ndash;<input placeholder="password" name="password" type="password" class="form-control" id="password" ngModel required #password="ngModel"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<span class="help-block" *ngIf="!password.valid && password.touched">&ndash;&gt;-->
+      <!--&lt;!&ndash;Please enter password!&ndash;&gt;-->
+    <!--&lt;!&ndash;</span>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<button class="btn btn-primary btn-block" type="submit" [disabled]="!f.valid">Login</button>&ndash;&gt;-->
+    <!--&lt;!&ndash;<button class="btn btn-success btn-block" routerLink="/register">Register</button>&ndash;&gt;-->
+  <!--&lt;!&ndash;</form>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+
+<!--<div class="view intro-2 hm-gradient size">-->
+  <!--<div class="login-box">-->
+    <!--<img src="http://iconshow.me/media/images/ui/ios7-icons/png/256/contact.png"-->
+         <!--class="user-icon-login">-->
+    <!--<h1 class="login-title">Login</h1>-->
+    <!--<div *ngIf="errorFlag" class="alert alert-danger">-->
+      <!--{{errorMsg}}-->
+    <!--</div>-->
+
+    <!--&lt;!&ndash; using angular form (ngForm) instead of traditional <input> tag &ndash;&gt;-->
+    <!--<form (ngSubmit) = "login()" #f="ngForm">-->
+
+      <!--<label for="username" class="white-color">Username</label>-->
+      <!--<input placeholder="username" name="username" type="text" class="form-control" id="username" placeholder="username"-->
+             <!--ngModel required #username="ngModel"/>-->
+      <!--<span class="help-block" *ngIf="!username.valid && username.touched">-->
+      <!--Please enter username!-->
+    <!--</span>-->
+
+      <!--<label for="password" class="white-color">Password</label>-->
+      <!--<input placeholder="password" name="password" type="password" class="form-control" id="password" placeholder="******"-->
+             <!--ngModel required #password="ngModel"/>-->
+      <!--<span class="help-block" *ngIf="!password.valid && password.touched">-->
+      <!--Please enter password!-->
+    <!--</span>-->
+
+      <!--<button class="btn btn-primary btn-block white-color" type="submit" [disabled]="!f.valid">Login</button>-->
+      <!--<button class="btn btn-success btn-block white-color" routerLink="/register">Register</button>-->
+    <!--</form>-->
+  <!--</div>-->
+<!--</div>-->
+
+<!--<nav class="navbar navbar-default navbar-fixed-bottom">-->
+  <!--<div class="container-fluid">-->
+    <!--<div class="navbar-text pull-left">-->
+      <!--<a routerLink="/search">-->
+      <!--<span class="glyphicon glyphicon glyphicon-home color-black">-->
+      <!--</span>-->
+      <!--</a>-->
+    <!--</div>-->
+    <!--<p class="navbar-text pull-right">-->
+      <!--<a routerLink="/faq" class="navbar-link">Frequently asked Question-->
+        <!--&lt;!&ndash;<span class="glyphicon glyphicon-user"></span>&ndash;&gt;-->
+      <!--</a>-->
+    <!--</p>-->
+
+  <!--</div>-->
+<!--</nav>-->
+
+
+
+
+<!--Intro Section-->
+<div class="view intro-2 hm-gradient">
+  <div class="container-size-login container"></div>
+  <div class="full-bg-img">
+
+    <div class="container flex-center">
+      <div class="d-flex align-items-center content-height">
+        <div class="row flex-center pt-5 mt-3">
+          <div class="col-md-6 text-center text-md-left mb-5">
+            <div class="container-small">   </div>
+            <div class="row">
+              <div class="col-9">          </div>
+
+              <div class="white-text">
+                <h1 class="h1-responsive font-weight-bold font-kind-login">Sign up </h1>
+                <h1 class="h1-responsive font-weight-bold font-kind-login"> right now! </h1>
+                <hr class="hr-light">
+                <h4 class="" data-wow-delay="0.3s">Find your cuisine in Foodphilia!</h4>
+                <br>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-5 offset-xl-1">
+            <!--Form-->
+            <div class="card wow fadeInRight" data-wow-delay="0.3s">
+              <div class="card-body">
+                <!--Header-->
+                <div class="text-center">
+                  <h3 class="white-text login-title"><i class="fa fa-user white-text"></i>Login</h3>
+                  <hr class="hr-light">
+                  <div *ngIf="errorFlag" class="alert alert-danger">
+                    {{errorMsg}}
+                  </div>
+                </div>
+
+                <form (ngSubmit) = "login()" #f="ngForm">
+
+                  <label for="username" class="white-color">Username</label>
+                  <input placeholder="username" name="username" type="text" class="form-control" id="username" placeholder="username"
+                         ngModel required #username="ngModel"/>
+                  <span class="help-block" *ngIf="!username.valid && username.touched">Please enter username!</span>
+
+                  <label for="password" class="white-color">Password</label>
+                  <input placeholder="password" name="password" type="password" class="form-control" id="password" placeholder="******"
+                         ngModel required #password="ngModel"/>
+                  <span class="help-block" *ngIf="!password.valid && password.touched">Please enter password!</span>
+
+                  <a href="https://cs5610-final-yyj.herokuapp.com/facebook/login" class="btn btn-primary btn-block">
+                    <span class="fa fa-facebook"></span>
+                    Facebook
+                  </a>
+                  <button class="btn btn-primary btn-block white-color" type="submit" [disabled]="!f.valid">Login</button>
+                  <button class="btn btn-success btn-block white-color" routerLink="/register">Register</button>
+                </form>
+
+                <div class="text-center">
+                  <hr class="hr-light mb-3 mt-4">
+
+                  <div class="inline-ul text-center d-flex justify-content-center">
+                    <a class="icons-sm tw-ic"><i class="fa fa-facebook white-text"></i></a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!--/.Form-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-text pull-left">
+      <a routerLink="/search">
+      <span class="glyphicon glyphicon glyphicon-home color-black">
+      </span>
+      </a>
+    </div>
+    <p class="navbar-text pull-right">
+      <a routerLink="/faq" class="navbar-link">Frequently asked Question
+        <!--<span class="glyphicon glyphicon-user"></span>-->
+      </a>
+      <a routerLink="/profile" class="navbar-link">
+        <span class="glyphicon glyphicon-user"></span>
+      </a>
+    </p>
+
+
+  </div>
+</nav>

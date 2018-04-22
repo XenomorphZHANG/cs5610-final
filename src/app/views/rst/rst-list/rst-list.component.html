@@ -1,0 +1,68 @@
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid row">
+
+    <div class="navbar-text pull-left">
+      <a routerLink="/search" class="cl-text-black cl-icon-padding">
+          <span class="glyphicon glyphicon-chevron-left">
+          </span>
+      </a>
+    </div>
+    <div class="navbar-text pull-right">
+      <a routerLink="/rst/new" *ngIf="user.userType == 'owner'" class="cl-icon-padding cl-text-black">
+          <span class="glyphicon glyphicon-plus">
+          </span>
+      </a>
+    </div>
+    <a class="navbar-brand cl-text-white cl-text-bold" routerLink="/rst">
+      Restaurants
+    </a>
+  </div>
+</nav>
+
+<!--<div *ngIf="errorFlag" class="alert alert-danger">-->
+  <!--{{errorMsg}}-->
+<!--</div>-->
+
+
+<div class="showcase-rst">
+  <div class="container-box-blog">
+    <div class="scrollBody scroll-body">
+      <ul class="list-group cl-list-group-borderless move-blog">
+        <li class="list-group-item-header cl-list-item-borderless">
+          <p>Your Restaurants
+          </p>
+        </li>
+        <li class="list-group-item-element cl-list-item-borderless" *ngFor="let rst of rsts">
+          <a routerLink="/rst/{{rst._id}}/page" class="text-font">{{rst.name}}</a>
+          <a routerLink="/rst/{{rst._id}}" class="text-font">
+            <span class="glyphicon glyphicon-cog pull-right glyphicon-position"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-text pull-left">
+      <a routerLink="/search">
+      <span class="glyphicon glyphicon glyphicon-home color-black">
+      </span>
+      </a>
+    </div>
+    <p class="navbar-text pull-right">
+      <a routerLink="/faq" class="navbar-link">Frequently asked Question
+        <!--<span class="glyphicon glyphicon-user"></span>-->
+      </a>
+      <a routerLink="/profile" class="navbar-link">
+        <span class="glyphicon glyphicon-user"></span>
+      </a>
+    </p>
+
+
+  </div>
+</nav>

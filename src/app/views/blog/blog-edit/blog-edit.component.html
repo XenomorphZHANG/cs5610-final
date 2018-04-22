@@ -1,0 +1,79 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid row">
+
+    <div class="navbar-text pull-left">
+      <a routerLink=".." class="cl-text-black cl-icon-padding">
+          <span class="glyphicon glyphicon-chevron-left">
+          </span>
+      </a>
+    </div>
+    <div class="navbar-text pull-right">
+      <a (click)="updateBlog()" class="cl-icon-padding cl-text-black">
+          <span class="glyphicon glyphicon-ok">
+          </span>
+      </a>
+    </div>
+    <a class="navbar-brand cl-text-white cl-text-bold" routerLink="/blog/{{blogId}}">
+      Edit Blog
+    </a>
+  </div>
+</nav>
+
+<div class="showcase-blog">
+  <div class="container-box-blog">
+    <div class="scrollBody scroll-body">
+  <form>
+    <div class="form-move">
+    <div class="form-group">
+      <label for="blog-title">Title</label>
+      <input [(ngModel)]="newBlog.title" type="text" class="form-control" id="blog-title" placeholder="Title"
+             [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+      <label for="blog-content">Content</label>
+      <div class="html-bg">
+      <quill-editor [(ngModel)]="newBlog.content" id="blog-content"
+                    [ngModelOptions]="{standalone: true}"></quill-editor>
+    </div>
+
+    </div>
+    <div class="form-group">
+      <label for="blog-rating">Rating</label>
+      <input [(ngModel)]="newBlog.rating" type="text" class="form-control" id="blog-rating" placeholder="Rating"
+             [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+      <label for="blog-image">Image URL</label>
+      <input [(ngModel)]="newBlog.image_urls" id="blog-image" class="form-control" placeholder="Image URL"
+             [ngModelOptions]="{standalone: true}">
+      <!--<div class="form-group">-->
+        <!--<label for="exampleInputFile">Browse Image</label>-->
+        <!--<input type="file" class="form-control" id="exampleInputFile">-->
+      <!--</div>-->
+    </div>
+    </div>
+  </form>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-text pull-left">
+      <a routerLink="/search">
+      <span class="glyphicon glyphicon glyphicon-home color-black">
+      </span>
+      </a>
+    </div>
+    <p class="navbar-text pull-right">
+      <a routerLink="/faq" class="navbar-link">Frequently asked Question
+        <!--<span class="glyphicon glyphicon-user"></span>-->
+      </a>
+      <a routerLink="/profile" class="navbar-link">
+        <span class="glyphicon glyphicon-user"></span>
+      </a>
+    </p>
+
+
+  </div>
+</nav>

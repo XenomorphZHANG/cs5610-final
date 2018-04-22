@@ -1,0 +1,88 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid row">
+
+    <div class="navbar-text pull-left">
+      <a routerLink="/search" class="cl-text-black cl-icon-padding">
+          <span class="glyphicon glyphicon-chevron-left">
+          </span>
+      </a>
+    </div>
+    <div class="navbar-text pull-right">
+      <a routerLink="/register" class="cl-icon-padding cl-text-black">
+          <span class="glyphicon glyphicon-plus">
+          </span>
+      </a>
+    </div>
+    <a class="navbar-brand cl-text-white cl-text-bold" routerLink="/admin">
+      Users
+    </a>
+  </div>
+</nav>
+
+<div class="showcase-blog">
+  <div class="container-box-blog">
+    <div class="scrollBody scroll-body">
+      <ul class="list-group cl-list-group-borderless move-blog">
+        <li class="list-group-item-header cl-list-item-borderless">
+          <p>Users
+          </p>
+        </li>
+        <li class="list-group-item-element cl-list-item-borderless" *ngFor="let user of users">
+          <a (click)="showUser(user)" class="text-font">{{user.username}}</a>
+          <!--<a routerLink="/blog/{{blog._id}}" class="text-font"> -->
+            <!--<span class="glyphicon glyphicon-cog pull-right glyphicon-position"></span>-->
+          <!--</a>-->
+        </li>
+      </ul>
+
+
+
+      <div *ngIf="selectUser">
+        <form>
+          <label for="username">Username</label>
+          <input [(ngModel)]="selectUser.username" type="text" class="form-control" id="username" placeholder="username" [ngModelOptions]="{standalone: true}"/>
+
+          <label for="firstname">First Name</label>
+          <input [(ngModel)]="selectUser.firstname" type="text" class="form-control" id="firstname" placeholder="first name" [ngModelOptions]="{standalone: true}"/>
+
+          <label for="lastname">Last Name</label>
+          <input [(ngModel)]="selectUser.lastname" type="text" class="form-control" id="lastname" placeholder="last name" [ngModelOptions]="{standalone: true}"/>
+
+          <label for="email">Email</label>
+          <input [(ngModel)]="selectUser.email" type="text" class="form-control" id="email" placeholder="email" [ngModelOptions]="{standalone: true}"/>
+
+          <label for="usertype">UserType</label>
+          <input [(ngModel)]="selectUser.userType" type="text" class="form-control" id="usertype" placeholder="user type" [ngModelOptions]="{standalone: true}"/>
+
+          <div align="center">
+            <button (click)="updateUser()" class="btn btn-primary btn-color btn-block btn-position">Update User</button>
+            <button routerLink="/login" (click)="deleteUser()" class="btn btn-danger btn-color btn-block">Delete User</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-text pull-left">
+      <a routerLink="/search">
+      <span class="glyphicon glyphicon glyphicon-home color-black">
+      </span>
+      </a>
+    </div>
+    <p class="navbar-text pull-right">
+      <a routerLink="/faq" class="navbar-link">Frequently asked Question
+        <!--<span class="glyphicon glyphicon-user"></span>-->
+      </a>
+      <a routerLink="/profile" class="navbar-link">
+        <span class="glyphicon glyphicon-user"></span>
+      </a>
+    </p>
+
+
+  </div>
+</nav>

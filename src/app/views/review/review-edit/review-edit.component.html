@@ -1,0 +1,69 @@
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid row">
+
+    <div class="navbar-text pull-left">
+      <a routerLink=".." class="cl-text-black cl-icon-padding">
+          <span class="glyphicon glyphicon-chevron-left">
+          </span>
+      </a>
+    </div>
+    <div class="navbar-text pull-right">
+      <a (click)="updateReview()" class="cl-icon-padding cl-text-black">
+          <span class="glyphicon glyphicon-ok">
+          </span>
+      </a>
+    </div>
+    <a class="navbar-brand cl-text-white cl-text-bold">
+      New Blog
+    </a>
+  </div>
+</nav>
+
+<div class="showcase-review">
+  <div class="container-box-blog">
+    <div id="scrollBody scroll-body">
+      <!--<div class="container move-blog">-->
+      <form>
+        <div class="form-move">
+          <div class="form-group">
+            <label for="blog-title">Rating</label>
+            <input [(ngModel)]="review.rating" type="text" class="form-control" id="blog-title" placeholder="Title"
+                   [ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="form-group">
+            <label for="blog-content">Content</label>
+            <textarea [(ngModel)]="review.content" type="text" class="form-control" rows="10" id="blog-content" placeholder="Content"
+                      [ngModelOptions]="{standalone: true}"></textarea>
+          </div>
+          <!--<div class="form-group">-->
+          <!--<label for="exampleInputFile">Browse Image</label>-->
+          <!--<input type="file" class="form-control" id="exampleInputFile">-->
+        </div>
+      </form>
+      <a class="btn btn-danger  btn-block" (click)="deleteReview()">Delete Review</a>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-text pull-left">
+      <a routerLink="/search">
+      <span class="glyphicon glyphicon glyphicon-home color-black">
+      </span>
+      </a>
+    </div>
+    <p class="navbar-text pull-right">
+      <a routerLink="/faq" class="navbar-link">Frequently asked Question
+        <!--<span class="glyphicon glyphicon-user"></span>-->
+      </a>
+      <a routerLink="/profile" class="navbar-link">
+        <span class="glyphicon glyphicon-user"></span>
+      </a>
+    </p>
+
+
+  </div>
+</nav>
+

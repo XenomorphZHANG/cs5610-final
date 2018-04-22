@@ -1,0 +1,1140 @@
+
+.borders {
+  border-left: 1px solid #ddd;
+  margin: -20px;
+  height:750px;
+  left: 20px;
+
+}
+
+/*.pull-right {*/
+/*float:right;*/
+/*}*/
+
+body {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  /*transform: scale(1.2);*/
+}
+input.form-control {
+  margin-bottom: 5px;
+}
+
+.cl-form-bottom-padding{
+  margin-bottom: 2em;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+/*.cl-container-padding {*/
+/*padding-top: 30%;*/
+/*padding-bottom: 10%;*/
+/*}*/
+
+.cl-blue-navbar{
+  background-color: #337ab7;
+}
+
+.cl-text-white{
+  color: #fff;
+}
+
+.cl-text-black{
+  color: #000000;
+}
+
+.cl-text-bold{
+  font-weight: bold;
+}
+
+.cl-icon-padding {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.cl-header-padding{
+  padding-left: 5%;
+}
+
+.cl-full-width{
+  width: 100%;
+}
+
+.cl-widget-list-item{
+  padding-bottom: 20px;
+}
+
+.cl-v-divider{
+  border-right: 1px solid #808080;
+  height: 100%;
+}
+
+.cl-widget-heading{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.cl-widget-paragraph{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.cl-height{
+  height: 100%;
+  min-height: 100%;
+}
+
+.cl-relative-position{
+  position: relative;
+}
+.cl-absolute-position{
+  position: absolute;
+}
+.cl-widget-list-icons{
+  top: 0px;
+  right: 0px;
+  z-index: 10;
+  background-color: white;
+}
+.cl-zero-right-padding{
+  padding-right: 0px;
+}
+
+.cl-list-item-borderless {
+  border-top: 0 none;
+  border-bottom: 0 none;
+  border-left: 0 none;
+  border-right: 0 none;
+  text-decoration: none;
+  list-style: none;
+}
+
+.list-group-item-header {
+  background-color: rgba(255,255,255, 0);
+  margin-top: 8%;
+  text-align: center;
+  font-size: 45px;
+  color: black;
+  font-family: 'Pacifico', cursive;
+  font-weight: bold;
+}
+
+.list-group-item-element {
+  background-color: rgba(255,255,255, 0);
+  margin-top: 5%;
+  text-align: left;
+  margin-left: 10%;
+  font-size: 25px;
+  color: black;
+}
+
+.list-group-item-element-review {
+  background-color: rgba(255,255,255, 0);
+  margin-top: 5%;
+  text-align: left;
+  /*margin-left: 10%;*/
+  font-size: 20px;
+  color: black;
+}
+.glyphicon-position {
+  margin-right: 10%;
+  margin-top: 1%;
+}
+
+.header-position {
+  margin-left: 0%;
+}
+
+.lable-size {
+  font-size: 25px;
+}
+/*.container-box {*/
+/*position: absolute;*/
+/*top: 50%;*/
+/*left: 50%;*/
+/*transform: translate(-50%, -50%);*/
+/*width: 70%;*/
+/*height: 100%;*/
+/*box-sizing: border-box;*/
+/*background-color: rgba(255,255,255, 0.5);*/
+/*padding: 40px 40px;*/
+/*}*/
+
+.cl-widget-images{
+  display: inline;
+  width: 85%;
+  z-index: 100;
+  position: relative;
+}
+
+.cl-font-size {
+  font-size: 20px;
+}
+
+/*.cl-list-group-padding {*/
+/*padding: 30px 30px;*/
+/*!important;*/
+/*}*/
+
+.cl-8-top {
+  margin-top: 20px;
+  margin-left: 0px;
+}
+
+.cl-widget-gly-color {
+  color: #000000;
+}
+
+.cl-widget-toolbar-cog {
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  font-size:20px;
+  padding-bottom: 5px;
+  padding-left: 2px;
+}
+
+.cl-widget-toolbar-hamburger {
+  background-color: white;
+  font-size:20px;
+  padding-bottom: 5px;
+}
+
+.cl-visible {
+  visibility: visible;
+}
+
+.content{
+  height: 100px;
+  /*border: 2px solid #fff;*/
+}
+
+.content1{
+  /*background: #66a05c;*/
+  text-align: center;
+}
+
+.bg-image{
+  /*display: inline;*/
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  background: url('http://www.jackspiceradams.com/wp-content/uploads/2017/05/Minmin-noodle-bar-03.jpg') no-repeat 50% 10%;
+  /*background-size: contain;*/
+  position:absolute;
+  filter:alpha(opacity=50);
+  -moz-opacity:0.5;
+  /*-khtml-opacity: 0.5;*/
+  opacity: 0.5;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.showcase {
+  background-image: url('http://www.jackspiceradams.com/wp-content/uploads/2017/05/Minmin-noodle-bar-03.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  /*background:rgba(255,255,255,0.3);*/
+  font-family: 'PT Serif', serif;
+
+}
+
+.background-transparent {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color:rgba(255,255,255,0.5);
+  /*transform: scale(1.2);*/
+  /*filter:alpha(opacity=50);*/
+  /*-moz-opacity:0.5;*/
+  /*-khtml-opacity: 0.5;*/
+  /*opacity: 0.5;*/
+}
+
+/*.background-img{*/
+/*background-image: url('http://www.jackspiceradams.com/wp-content/uploads/2017/05/Minmin-noodle-bar-03.jpg');*/
+/*background-size: cover;*/
+/*background-position: center;*/
+/*}*/
+body {
+  font-family: 'PT Serif', serif;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*#latitude {*/
+/*height: 50%;*/
+/*width: 70px;*/
+/*}*/
+/*style="width: 50%; margin-left: 25%"*/
+
+.search {
+  min-width: 80%;
+  /*margin-top: 20%;*/
+  background-color:rgba(255,255,255,1);
+  overflow: hidden; /*left: 30%;*/
+
+}
+
+
+/*.images-content{*/
+/*position: absolute;*/
+/*z-index: 1;*/
+/*left: 0;*/
+/*bottom:0;*/
+/*width: 100%;*/
+/*color: #fff;*/
+/*background: rgba(0,0,0,.7);*/
+/*height: 54px;*/
+/*line-height: 54px;*/
+/*overflow: hidden;*/
+/*}*/
+/*.images-wrapper{*/
+/*!*width:251px;*!*/
+/*!*height:330px;*!*/
+/*position:relative;*/
+/*!*background-image: url('http://www.jackspiceradams.com/wp-content/uploads/2017/05/Minmin-noodle-bar-03.jpg');*!*/
+/*background-size: cover;*/
+/*background-position: center;*/
+/*height: 100vh;*/
+/*padding-top: 70px;*/
+/*padding-bottom: 70px;*/
+/*display: flex;*/
+/*justify-content: center;*/
+/*align-content: center;*/
+/*!*background:rgba(255,255,255,0.3);*!*/
+/*filter:alpha(opacity=50);*/
+/*-moz-opacity:0.5;*/
+/*!*-khtml-opacity: 0.5;*!*/
+/*opacity: 0.5;*/
+/*}*/
+
+.header-font {
+  width: 50%;
+  margin-top: 10%;
+  padding-left: 30px;
+  font-family: 'Pacifico', cursive;
+  /*filter:alpha(opacity=100);*/
+  /*-moz-opacity:1;*/
+  /*!*-khtml-opacity: 0.5;*!*/
+  /*opacity: 1;*/
+  font-size: x-large;
+  color: #000000;
+}
+
+.inner-case {
+  margin-top: 20%;
+  height: 60%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+input, textarea, select, button {
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  margin: 0em;
+  font: 400 11px system-ui;
+}
+
+.header-user {
+  margin-right: 3%;
+  font-size: larger;
+  margin-top: 22px;
+  color: #000;
+}
+
+.header-login {
+  margin-right: 0px;
+  font-size: larger;
+  font-family: 'Domine', serif;
+}
+
+.container {
+  width: 60%;
+  height: 50%;
+  margin: 0 auto;
+  position: relative;
+}
+
+nav>ul>li {
+  list-style: none;
+  float: left;
+}
+
+nav>ul>li>a {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0 10px 0 10px;
+
+}
+
+nav>ul {
+  position: absolute;
+  right: 0;
+}
+
+.logo {
+  /*position: relative;*/
+  font-size: 50px;
+  color: #000000;
+  margin-top: 23%;
+  font-family: 'Satisfy', cursive;
+  text-align: center;
+}
+
+.footer-contact {
+  position: absolute;
+  font-size: 15px;
+  margin-top: 48%;
+  margin-right: 40%;
+  color: #000000;
+}
+
+.login-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+  height: 50%;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 40px 40px;
+}
+
+.user-icon-login {
+  width: 30%;
+  height: 25%;
+  border-radius: 50%;
+  position: absolute;
+  overflow: hidden;
+  top: calc(-100px/2);
+  left: calc(35%);
+}
+
+.login-title {
+  text-align: center;
+  /*color: navy;*/
+  color: black;
+  font-weight: bold;
+  font-size:25px;
+  /*font-family: 'Berkshire Swash', cursive;*/
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  margin-bottom: 20px;
+  /*border: none;*/
+  /*background: transparent;*/
+  height: 35px;
+  color: black;
+  font-size: 16px;
+  border-bottom: 1px solid black;
+  min-width: 100px;
+  max-width: 100%;
+}
+
+.white-color {
+  color: #ffffff;
+  font-weight: bold;
+  font-family: 'PT Serif', serif;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'PT Serif', serif;
+}
+
+.register-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+  height: 85%;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 40px 40px;
+
+}
+
+.user-icon-register {
+  width: 30%;
+  height: 15%;
+  border-radius: 50%;
+  position: absolute;
+  overflow: hidden;
+  top: calc(-100px/2);
+  left: calc(35%);
+}
+
+.icon-size {
+  font-size: larger;
+  margin-top: 10px;
+}
+
+/*left-margin {*/
+/*padding-left: 100px;*/
+/*}*/
+
+.profile-box {
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 40px 40px;
+
+}
+
+.user-icon-profile {
+  width: auto;
+  height: 16%;
+  border-radius: 50%;
+  position: absolute;
+  overflow: hidden;
+  top: calc(-100px/2);
+  left: calc(35%);
+  /*padding-left: ;*/
+}
+
+.color-black {
+  color: black;
+}
+
+.container-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: rgba(255,255,255, 0.5);
+  padding: 40px 40px;
+}
+
+
+.intro-2 {
+  background: url("http://www.jackspiceradams.com/wp-content/uploads/2017/05/Minmin-noodle-bar-03.jpg")no-repeat center center;
+  background-size: cover;
+  height:100vh;
+  top: 5%;
+}
+.btn .fa {
+  margin-left: 3px;
+}
+/*.top-nav-collapse {*/
+/*background-color: #424f95 !important;*/
+/*}*/
+/*.navbar:not(.top-nav-collapse) {*/
+/*background: transparent !important;*/
+/*}*/
+/*@media (max-width: 768px) {*/
+/*.navbar:not(.top-nav-collapse) {*/
+/*background: #424f95 !important;*/
+/*}*/
+/*}*/
+h6 {
+  line-height: 1.7;
+}
+.full-bg-img {
+  /*background: -moz-linear-gradient(45deg, rgba(42, 27, 161, 0.6), rgba(29, 210, 177, 0.6) 100%);*/
+  /*background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.6), rgba(29, 210, 177, 0.6) 100%);*/
+  /*background: -webkit-gradient(linear, 45deg, from(rgba(42, 27, 161, 0.6)), to(rgba(29, 210, 177, 0.6)));*/
+  /*background: -o-linear-gradient(45deg, rgba(42, 27, 161, 0.6), rgba(29, 210, 177, 0.6) 100%);*/
+  /*background: linear-gradient(to 45deg, rgba(42, 27, 161, 0.6), rgba(29, 210, 177, 0.6) 100%);*/
+  background-color:rgba(255,255,255,0.4);
+  /*height: 80%;*/
+}
+@media (max-width: 450px) {
+  .margins {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+}
+@media (max-width: 100vw) {
+  .full-height,
+  .full-height body,
+  .full-height header,
+  .full-height header .view {
+    height: 1040px;
+
+  }
+}
+
+.size {
+  width: 100%;
+}
+.footer-copyright {
+  /*margin-top: 0%;*/
+  /*margin-right: 40%;*/
+  font-size: 15px;
+  position: relative;
+  top: 50px;
+  vertical-align: bottom;
+  /*transform: translateY(-50%);*/
+}
+
+.container-size {
+  height: 33%;
+  position: relative;
+  top: 10vh;
+}
+
+.container-size-small {
+  height: 10%;
+}
+
+.container-size-login {
+  height: 15%;
+}
+
+.font-kind-login {
+  font-family: 'Pacifico', cursive;
+  font-family: 'Dancing Script', cursive;
+  font-weight: bolder;
+  font-size: 60px;
+}
+
+
+
+
+
+.intro-3 {
+  background: url("http://mdbootstrap.com/img/Photos/Others/img%20(42).jpg")no-repeat center center;
+  background-size: cover;
+}
+
+/*.input-size {*/
+/*display: block;*/
+/*width: 100%;*/
+/*height: 34px;*/
+/*padding:6px 12px;*/
+/*font-size: 14px;*/
+/*line-height: 1.42857143;*/
+/*color: #555;*/
+/*background-color: #fff;*/
+/*background-image: none;*/
+/*border: 1px solid #ccc;*/
+/*border-radius: 4px;*/
+/*-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);*/
+/*box-shadow: inset 0 1px 1px rgba(0,0,0,.075);*/
+/*-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;*/
+/*-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;*/
+/*transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;*/
+/*}*/
+
+.btn-color {
+  /*background-color:rgba(255,255,255,0.2);*/
+  width: 80%;
+  filter:alpha(opacity=80);
+  -moz-opacity:0.8;
+  /*-khtml-opacity: 0.5;*/
+  opacity: 0.8;
+}
+
+.profile-title {
+  text-align: center;
+  /*color: navy;*/
+  color: black;
+  font-weight: bold;
+  font-size:40px;
+  /*font-family: 'Berkshire Swash', cursive;*/
+  /*padding-bottom: 50px;*/
+  /*top: 30px*/
+  position: relative;
+  top: 7%;
+}
+
+.move {
+  position: relative;
+  top: 7%;
+}
+
+.showcase-faq {
+  /*background-image: url('http://blog.photojaanic.com/wp-content/uploads/sites/2/2017/07/food-photography-tips-photojaanic-8.jpg');*/
+  background-image: url('http://msjaiinc.com/clients/outloud-images/the-carmichael-firm/fullscreen/images/The%20Carmichael%20Firm-Web-faq_background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  /*background:rgba(255,255,255,0.3);*/
+  font-family: 'PT Serif', serif;
+}
+
+.container-box-faq {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 40px 40px;
+}
+
+.move-li {
+  position: relative;
+  top: 5%;
+}
+
+.move-faq {
+  position: relative;
+  top: 10%;
+}
+
+.header-faq {
+  font-size: 30px;
+}
+
+.move-blog {
+  position: relative;
+  top: 30%;
+}
+
+
+.showcase-blog {
+  background-image: url('http://blog.photojaanic.com/wp-content/uploads/sites/2/2017/07/food-photography-tips-photojaanic-8.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  /*background:rgba(255,255,255,0.3);*/
+  font-family: 'PT Serif', serif;
+}
+
+.container-box-blog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 40px 40px;
+  word-wrap:break-word;
+  word-break:break-all;
+}
+
+.scroll-body {
+  position:relative;
+  top:0;bottom:0;left:0;right:0;
+  overflow:scroll;
+  height:100%;
+}
+
+.text-font {
+  font-size: 20px;
+  color: black;
+}
+
+.move-blog {
+  position: relative;
+  top: 20px;
+}
+
+.form-move {
+  position: relative;
+  top: 30px;
+}
+
+.title-size {
+  font-size: 80px;
+  font-family: 'Courgette', cursive;
+}
+
+.list-group-item-content {
+  background-color: rgba(255,255,255, 0);
+  margin-top: 8%;
+  /*text-align: center;*/
+  font-size: 45px;
+  color: black;
+  font-family: 'Pacifico', cursive;
+  /*font-weight: bold;*/
+}
+
+.html-bg {
+  background: white;
+}
+
+.rating-size {
+  font-size: 30px;
+  position: relative;
+  left: 60%;
+  width: 35%;
+  font-family: 'Domine', serif;
+}
+
+.list-group-item-html {
+  background-color: rgba(255,255,255, 0);
+  margin-top: 5%;
+  text-align: left;
+  margin-left: 10%;
+  font-size: 20px;
+  color: black;
+}
+
+.showcase-rst {
+  background-image: url('http://www.tradecanvasprints.com/blog/wp-content/uploads/2016/11/bigstock-Healthy-food-choice-121417376.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  /*background:rgba(255,255,255,0.3);*/
+  font-family: 'PT Serif', serif;
+}
+
+.container-position {
+  position: relative;
+  top: 7%;
+}
+
+.container-position-page {
+  position: relative;
+  top: 20%;
+}
+
+.list-group-item-list {
+
+}
+
+.container-position-footer {
+  position: relative;
+  top: 30%;
+}
+
+.showcase-review {
+  background-image: url('https://www.nyfa.edu/student-resources/wp-content/uploads/2014/08/for-the-love-of-the-south.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  /*background:rgba(255,255,255,0.3);*/
+  font-family: 'PT Serif', serif;
+}
+
+.agm-map {
+  height: 300px;
+  width: 300px;
+}
+
+.card-position {
+  position: relative;
+  right: 150px;
+}
+
+.bg-card {
+  /*background-color: black;*/
+}
+
+.image-position {
+  position: relative;
+  left: 10%;
+}
+
+
+
+
+
+.img-list {
+  max-width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+}
+
+.container-search {
+  max-height: 100px;
+  /*max-width: 700px;*/
+  width: 100%;
+  height: 50%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.container-list {
+  margin: auto;
+  width: 130%;
+  max-width: 900px;
+  /*margin: 0 auto;*/
+  position: relative;
+  left: 3%;
+  top: 25vh;
+}
+/*@media only screen and (min-width: 815px) {*/
+/*.container {*/
+/*margin: 7em auto;*/
+/*}*/
+/*}*/
+
+.widget {
+  position: relative;
+  margin: 0 auto;
+  max-width: 320px;
+  height: 875px;
+  background: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  vertical-align: center;
+
+}
+@media only screen{
+  .widget {
+    margin: 0;
+    max-width: 800px;
+    height: auto;
+    /*min-height: 00px;*/
+  }
+}
+
+figure {
+  margin: 0;
+  border: white 1px;
+}
+figure::after {
+  clear: both;
+  content: "";
+  display: table;
+  margin-bottom: 1%;
+}
+@media only screen{
+  figure img {
+    float: left;
+    width: 45%;
+    height: auto;
+  }
+}
+figure figcaption {
+  padding: 2.25em 2.5em 0;
+}
+@media only screen{
+  figure figcaption {
+    float: left;
+    width: 55%;
+  }
+}
+figure figcaption h3, figure figcaption .tag {
+  font-family: 'Playfair Display', serif;
+}
+figure figcaption h3 {
+  margin: 0;
+  font-size: 2em;
+  font-weight: 700;
+  color: #3b3b3b;
+}
+figure figcaption .tag {
+  display: block;
+  margin-top: 0.5em;
+  font-size: 0.9375em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #b26943;
+}
+figure figcaption p {
+  margin: 1.3em 0;
+  font-size: 0.875em;
+  line-height: 1.0em;
+}
+figure figcaption .rating {
+  color: #d08946;
+}
+figure figcaption .rating .fa {
+  margin-right: 5px;
+}
+figure figcaption .rating .fa:last-child {
+  margin-right: 0;
+}
+
+.slideshow-nav {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+  height: 125px;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/ricepaper2.png") repeat;
+  -webkit-box-shadow: inset 0px 10px 5px -6px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: inset 0px 10px 5px -6px rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0px 10px 5px -6px rgba(0, 0, 0, 0.08);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/*@media only screen and (min-width: 815px) {*/
+/*.slideshow-nav {*/
+/*width: 55%;*/
+/*}*/
+/*}*/
+
+.blue-button:hover{
+  background-color: #dadada;
+  color: #002E5B;
+}
+
+.rst-name-font {
+  font-family: 'Merriweather', serif;
+}
+
+.font-position {
+  position: relative;
+  bottom: 10px;
+}
+
+.button-position {
+  position: relative;
+  /*padding-bottom: 100px;*/
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+  border-top-color: inherit;
+  border-right-color: inherit;
+  border-bottom-color: inherit;
+  border-left-color: inherit;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+  border-top-color: inherit;
+  border-right-color: inherit;
+  border-bottom-color: inherit;
+  border-left-color: inherit;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+  border-top-color: inherit;
+  border-right-color: inherit;
+  border-bottom-color: inherit;
+  border-left-color: inherit;
+}
+
+.table>thead>tr>th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #ddd;
+}
+
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+}
+
+.col-position {
+  position:relative;
+  left: 5vw;
+}
+
+.col-width {
+  max-width: 60vw;
+}
+
+.container-box-rst-page {
+  position: relative;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 40px 40px;
+  word-wrap:break-word;
+  word-break:break-all;
+}
+
+.review-font {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  position: relative;
+
+  /*font-*/
+}
+
+.image-size {
+  max-width: 300px;
+  width: 120%;
+}
+
+.page-user {
+  font-family: 'Lora', serif;
+  font-weight: bold;
+  /*font-size: 30px*/
+}
+
+
+
+.container-position-faq {
+  position: relative;
+  top: 10%;
+}
+
+.list-group-item-element-faq {
+  background-color: rgba(255,255,255, 0);
+  /*margin-top: 2%;*/
+  text-align: left;
+  /*margin-left: 10%;*/
+  font-size: 25px;
+  color: black;
+}
+
+/*.list-group-item-element-faq {}*/
+.header-font-profile {
+  font-family: 'Pacifico', cursive;
+  color: #000000;
+}
+
+.btn-width {
+  width:40%;
+}

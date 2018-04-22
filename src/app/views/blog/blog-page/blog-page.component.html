@@ -1,0 +1,93 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+<div class="container-fluid row">
+
+  <div class="navbar-text pull-left">
+    <a routerLink=".." class="cl-text-black cl-icon-padding">
+          <span class="glyphicon glyphicon-chevron-left">
+          </span>
+    </a>
+  </div>
+  <div class="navbar-brand cl-text-white cl-text-bold">
+    {{blog.title}}
+  </div>
+</div>
+</nav>
+
+<div class="showcase-blog">
+  <div class="container-box-blog">
+    <div class="scrollBody scroll-body">
+  <ul class="list-group cl-list-group-borderless move-blog">
+    <li class="list-group-item-header cl-list-item-borderless">
+      <h1 class="title-size">{{blog.title}}</h1>
+    </li>
+    <li class="list-group-item-element cl-list-item-borderless">
+      <p class="rating-size">Rating: {{blog.rating}}</p>
+    </li>
+    <li class="list-group-item-html cl-list-item-borderless">
+      <div [innerHTML]="blog.content"></div>
+    </li>
+    <!--<div [innerHTML]="blog.content"></div>-->
+  <li class="list-group-item-html cl-list-item-borderless">
+    <img class="img-responsive img-rounded cl-widget-images"
+         src="{{blog.image_urls}}" alt="alt" width="60%">
+  </li>
+
+    <br/>
+    <div class="scrollBody scroll-body">
+      <div class="list-group-item-element">
+        <h3>Comments:</h3>
+        <ul class="list-group cl-list-group-borderless" *ngFor="let review of blog.reviews">
+          <li class="list-group-item-element-review cl-list-item-borderless">
+            {{review}}
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <br/>
+    <div align="center">
+      <a class="btn btn-primary btn-block btn-position btn-width" (click)="showAdd()">Write Comments</a>
+    </div>
+
+    <div *ngIf="newReview">
+      <label class="lable-size">Add New Comment</label>
+      <textarea [(ngModel)]="reviewContent" type="text" class="form-control" placeholder="Follow up"
+                [ngModelOptions]="{standalone: true}">
+        </textarea>
+      <br/>
+      <button class="btn btn-primary btn-block" (click)="addReview()">Submit</button>
+    </div>
+
+  </ul>
+
+
+      <!--<div class="container">-->
+      <!--<ul class="list-group cl-list-group-borderless move-blog">-->
+
+      <!--</ul>-->
+      <!--</div>-->
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-text pull-left">
+      <a routerLink="/search">
+      <span class="glyphicon glyphicon glyphicon-home color-black">
+      </span>
+      </a>
+    </div>
+    <p class="navbar-text pull-right">
+      <a routerLink="/faq" class="navbar-link">Frequently asked Question
+        <!--<span class="glyphicon glyphicon-user"></span>-->
+      </a>
+      <a routerLink="/profile" class="navbar-link">
+        <span class="glyphicon glyphicon-user"></span>
+      </a>
+    </p>
+
+
+  </div>
+</nav>

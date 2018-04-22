@@ -1,0 +1,247 @@
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid pull-left">
+    <div class="col-sm">
+      <a class="navbar-brand header-font" href="#"><strong>Foodphilia</strong></a>
+    </div>
+  </div>
+  <div class="content-fluid navbar-text navbar-right header-user pull-right" *ngIf="!user">
+    <a routerLink="/login" class="navbar-link header-login btn btn-outline-white">Login</a>
+    <a routerLink="/register" class="navbar-link header-login btn btn-outline-white">Register</a>
+    <!--</div>-->
+  </div>
+  <div class="content-fluid navbar-text navbar-right header-user pull-right" *ngIf="user && user.userType">
+    <a routerLink="/profile" class="navbar-link header-login btn btn-outline-white">Profile</a>
+  </div>
+</nav>
+
+<div class="view intro-2 hm-gradient size">
+  <div class="background-transparent">
+  <div class="scrollBody scroll-body">
+    <!--<div class="container container-size-small">-->
+
+    <!--</div>-->
+    <div class="container flex-center container-size">
+      <div class="row flex-center pt-5 mt-3">
+        <div class="text-center text-md-left margins">
+          <div class="white-text">
+            <h1 class="h1-responsive wow fadeInLeft logo">Welcome to FoodPhilia</h1>
+            <!--<hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s">-->
+            <!--<h6 class="fadeInLeft">xixix</h6>-->
+            <!--<div class="container"></div>-->
+
+          </div>
+          <br>
+        </div>
+      </div>
+      <div class="container-search">
+        <div class="col-md-12 input-group search">
+          <input [(ngModel)]="searchText" type="text" class="form-control" placeholder="keywords">
+          <!--<input [(ngModel)]="latitude" type="text" class="form-control" placeholder="latitude" required >-->
+          <!--<input [(ngModel)]="longitude" type="text" class="form-control" placeholder="longitude" required>-->
+          <span class="input-group-btn">
+        <a (click)="searchRst()" class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+        </a>
+         </span>
+        </div>
+      </div>
+      <div class="row py-5" *ngIf="footerFlag">
+
+        <!--Grid column-->
+        <div class="col-md-12 text-center footer-copyright">
+
+          <p>Copyright: Junru Xu, Yuxin Han, Yiyang Zhang</p>
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--<div class="container-list">-->
+        <!--<div class="col-md-12">-->
+        <!--<div class="widget" *ngFor = "let selectRst of searchResults" data-cycle-allow-wrap='true' data-cycle-fx='carousel' data-cycle-next='#next'>-->
+          <!--<div class='cycle-slideshow'>-->
+            <!--<figure>-->
+              <!--<img class="img-list" alt='A Taste of the Kitchen' [src] = "['' + selectRst.image_url]">-->
+              <!--<figcaption>-->
+                <!--<h3 class="rst-name-font font-position">{{selectRst.name}}</h3>-->
+                <!--<span class='tag'>Cuisine:&nbsp; {{selectRst.categories[0].title}}</span>-->
+                <!--<span class='tag'>Price:&nbsp; {{selectRst.price}}</span>-->
+                <!--<span class='tag'>Rating:&nbsp; {{selectRst.rating}}</span>-->
+                <!--<p>{{selectRst.location.state}} &nbsp;{{selectRst.location.city}}</p>-->
+                <!--<p>{{selectRst.location.address1}}</p>-->
+                <!--<a (click)="select(selectRst)" class="blue-button button-position">Detail</a>-->
+                <!--<br/>-->
+                <!--&lt;!&ndash;<div class='rating'>&ndash;&gt;-->
+                <!--&lt;!&ndash;<span class='fa fa-star'>1</span>&ndash;&gt;-->
+                <!--&lt;!&ndash;<span class='fa fa-star'>2</span>&ndash;&gt;-->
+                <!--&lt;!&ndash;<span class='fa fa-star'>3</span>&ndash;&gt;-->
+                <!--&lt;!&ndash;<span class='fa fa-star'></span>&ndash;&gt;-->
+                <!--&lt;!&ndash;<span class='fa fa-star'></span>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+              <!--</figcaption>-->
+            <!--</figure>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--</div>-->
+
+      <!--<div class="col-md-6 wow fadeInRight d-flex justify-content-center" data-wow-delay="0.3s">-->
+      <!--<img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/iphone-admin.png" alt="" class="img-responsive">-->
+      <!--</div>-->
+    </div>
+
+
+      <!--<div class="card bg-light bg-card mb-3"  *ngFor = "let selectRst of searchResults">-->
+        <!--<h5 align="center" class="card-title">{{selectRst.name}} {{selectRst.categories.title}} {{selectRst.location.address1}}</h5>-->
+        <!--<img (click)="select(selectRst)" class="card-img-top image-position" [src] = "['' + selectRst.image_url]"-->
+             <!--width="80%" height="80%" alt="Card image cap">-->
+        <!--<div class="card-body">-->
+          <!--&lt;!&ndash;<h5 class="card-title">{{selectRst.name}}</h5>&ndash;&gt;-->
+          <!--<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+          <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+        <!--</div>-->
+      <!--</div>-->
+
+
+
+      <!--<div class="index-content">-->
+        <!--<div class="container" *ngFor = "let selectRst of searchResults">-->
+          <!--<a href="blog-ici.html">-->
+            <!--<div class="col-lg-4">-->
+              <!--<div class="card card-position">-->
+                <!--<img [src] = "['' + selectRst.image_url]">-->
+                <!--<h4>{{selectRst.name}}</h4>-->
+                <!--<p>Category: {{selectRst.categories.title}}</p>-->
+                <!--<p>Location: {{selectRst.location.address1}}-->
+                <!--{{selectRst.location.address2}}</p>-->
+                <!--<a href="blog-ici.html" class="blue-button">Read More</a>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</a>-->
+
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="container-list">-->
+        <!--<div class="widget"  *ngFor = "let selectRst of searchResults" data-cycle-allow-wrap='true' data-cycle-fx='carousel' data-cycle-next='#next'>-->
+          <!--<div class='cycle-slideshow'>-->
+            <!--<figure>-->
+              <!--<img class="img-list" alt='A Taste of the Kitchen' [src] = "['' + selectRst.image_url]">-->
+              <!--<figcaption>-->
+                <!--<h3>{{selectRst.name}}</h3>-->
+                <!--&lt;!&ndash;<span class='tag'>{{selectRst.categories.aliases}} &nbsp;{{selectRst.categories.title}}</span>&ndash;&gt;-->
+                <!--<span class='tag'>{{selectRst.price}}</span>-->
+                <!--<span class='tag'>Rating:&nbsp; {{selectRst.rating}}</span>-->
+                <!--<p>{{selectRst.location.country}} &nbsp; {{selectRst.location.state}} &nbsp;{{selectRst.location.city}}</p>-->
+                <!--<p>{{selectRst.location.address1}}</p>-->
+                <!--<a (click)="select(selectRst)" class="blue-button">Detail</a>-->
+                <!--<br/>-->
+                <!--&lt;!&ndash;<div class='rating'>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<span class='fa fa-star'>1</span>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<span class='fa fa-star'>2</span>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<span class='fa fa-star'>3</span>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<span class='fa fa-star'></span>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<span class='fa fa-star'></span>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+              <!--</figcaption>-->
+            <!--</figure>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+
+
+      <!--<div class="col-md-12 flex-center">-->
+      <!--<div class="card card-position" align="center" style="width: 18rem;" *ngFor = "let selectRst of searchResults">-->
+        <!--<img (click)="select(selectRst)" class="card-img-top" [src] = "['' + selectRst.image_url]"-->
+             <!--width="100%" talt="Card image cap">-->
+        <!--<div class="card-body">-->
+          <!--<h5 class="card-title">{{selectRst.name}}</h5>-->
+          <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+        <!--</div>-->
+        <!--<ul class="list-group list-group-flush">-->
+          <!--<li class="list-group-item">Price: {{selectRst.price}}</li>-->
+          <!--<li class="list-group-item">Rating: {{selectRst.rating}}</li>-->
+        <!--</ul>-->
+        <!--<div class="card-body">-->
+          <!--<a href="#" class="card-link">Card link</a>-->
+          <!--<a href="#" class="card-link">Another link</a>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+      <!--<div *ngFor = "let selectRst of searchResults" class="col-xs-12">-->
+        <!--{{loadingGeoMsg}}-->
+        <!--{{selectRst.name}}-->
+        <!--<img (click)="select(selectRst)" width="30%" [src] = "['' + selectRst.image_url]"/>-->
+
+      <!--</div>-->
+      <!--<div class="container">-->
+
+      <!--Grid row-->
+      <!--Grid row-->
+
+      <!--</div>-->
+      <!--<div class="row py-5" *ngIf="footerFlag">-->
+
+        <!--&lt;!&ndash;Grid column&ndash;&gt;-->
+        <!--<div class="col-md-12 text-center footer-copyright">-->
+
+          <!--<p>Copyright: Junru Xu, Yuxin Han, Yiyang Zhang</p>-->
+
+        <!--</div>-->
+        <!--&lt;!&ndash;Grid column&ndash;&gt;-->
+
+      <!--</div>-->
+    <div class="container-list">
+      <div class="col-md-12">
+        <div class="widget" *ngFor = "let selectRst of searchResults" data-cycle-allow-wrap='true' data-cycle-fx='carousel' data-cycle-next='#next'>
+          <div class='cycle-slideshow'>
+            <figure>
+              <img class="img-list" alt='A Taste of the Kitchen' [src] = "['' + selectRst.image_url]">
+              <figcaption>
+                <h3 class="rst-name-font font-position">{{selectRst.name}}</h3>
+                <span class='tag'>Cuisine:&nbsp; {{selectRst.categories[0].title}}</span>
+                <span class='tag'>Price:&nbsp; {{selectRst.price}}</span>
+                <span class='tag'>Rating:&nbsp; {{selectRst.rating}}</span>
+                <p>{{selectRst.location.address1}}</p>
+                <p>{{selectRst.location.city}} &nbsp; {{selectRst.location.state}}</p>
+                <a (click)="select(selectRst)" class="blue-button button-position">Detail</a>
+                <br/>
+                <!--<div class='rating'>-->
+                <!--<span class='fa fa-star'>1</span>-->
+                <!--<span class='fa fa-star'>2</span>-->
+                <!--<span class='fa fa-star'>3</span>-->
+                <!--<span class='fa fa-star'></span>-->
+                <!--<span class='fa fa-star'></span>-->
+                <!--</div>-->
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-text pull-left">
+      <a routerLink="/search">
+      <span class="glyphicon glyphicon glyphicon-home color-black">
+      </span>
+      </a>
+    </div>
+    <p class="navbar-text pull-right">
+      <a routerLink="/faq" class="navbar-link">Frequently asked Question
+        <!--<span class="glyphicon glyphicon-user"></span>-->
+      </a>
+      <a routerLink="/profile" class="navbar-link">
+        <span class="glyphicon glyphicon-user"></span>
+      </a>
+    </p>
+
+
+  </div>
+</nav>

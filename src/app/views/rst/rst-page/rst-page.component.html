@@ -1,0 +1,116 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid pull-left">
+    <div class="col-sm">
+      <a class="navbar-brand header-font" href=" "><strong>Foodphilia</strong></a >
+    </div>
+  </div>
+  <div class="content-fluid navbar-text navbar-right header-user pull-right" *ngIf="!user">
+    <a routerLink="/login" class="navbar-link header-login btn btn-outline-white">Login</a >
+    <a routerLink="/register" class="navbar-link header-login btn btn-outline-white">Register</a >
+    <!--</div>-->
+  </div>
+  <div class="content-fluid navbar-text navbar-right header-user pull-right" *ngIf="user && user.userType">
+    <a routerLink="/profile" class="navbar-link header-login btn btn-outline-white">Profile</a >
+  </div>
+</nav>
+
+<!--<nav class="navbar navbar-default navbar-fixed-top">-->
+  <!--<div class="container-fluid row">-->
+
+    <!--<div class="navbar-text pull-left">-->
+      <!--<a routerLink="/search" class="cl-text-black cl-icon-padding">-->
+          <!--<span class="glyphicon glyphicon-chevron-left">-->
+          <!--</span>-->
+      <!--</a>-->
+    <!--</div>-->
+    <!--<div class="navbar-text pull-right">-->
+      <!--<div *ngIf="!user">-->
+        <!--<a routerLink="/login">Login</a>-->
+        <!--<a routerLink="/register">Register</a>-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+      <!--</div>-->
+      <!--<div *ngIf="user && user.userType">-->
+        <!--<a routerLink="/profile">Profile</a>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<a class="navbar-brand cl-text-white cl-text-bold header-font-profile" routerLink="/search">-->
+      <!--FoodPhilia-->
+    <!--</a>-->
+  <!--</div>-->
+<!--</nav>-->
+
+
+<div class="view intro-2 hm-gradient size">
+  <!--<div class="background-transparent">-->
+<div class="container-box-rst-page container-position-page">
+  <!--<div class="background-transparent">-->
+  <div class="scrollBody scroll-body">
+  <div class="row">
+    <div class="col-md-3">
+      <img src={{rst.image_url}} class="image-size">
+      <h2>{{rst.name}}</h2>
+      <h3>{{rst.categories.title}}</h3>
+      <p>
+        <strong>Rating: </strong>
+        {{rst.rating}}
+      </p >
+      <p>{{rst.review_count}} reviews</p >
+      <p>Price: {{rst.price}}</p >
+      <p>
+        <strong>Address:</strong>
+        {{rst.location.address1}}, {{rst.location.city}}
+      </p>
+      <agm-map [latitude]="lat" [longitude]="lng" [zoom]="15">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+      </agm-map>
+      <br/>
+      <a class="btn btn-primary" (click)="newReview()">Write Review</a >
+    </div>
+
+  <div class="col-md-9 col-position col-width">
+    <h1 class="review-font">Reviews</h1>
+    <table class="table">
+      <thead>
+      <tr>
+        <th class="col-md-3"></th>
+        <th class="col-md-9"></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let review of reviews">
+        <td>
+          <h4 class="page-user">User:&nbsp;{{user.username}}</h4>
+          <h4 class="page-user">Rating:&nbsp;{{review.rating}}</h4>
+          <p>{{review.dateCreated}}</p >
+        </td>
+        <td>
+          <p>{{review.content}}</p >
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+<!--</div>-->
+    </div>
+  </div>
+</div>
+<!--</div>-->
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-text pull-left">
+      <a routerLink="/search">
+      <span class="glyphicon glyphicon glyphicon-home color-black">
+      </span>
+      </a>
+    </div>
+    <p class="navbar-text pull-right">
+      <a routerLink="/faq" class="navbar-link">Frequently asked Question
+        <!--<span class="glyphicon glyphicon-user"></span>-->
+      </a>
+      <a routerLink="/profile" class="navbar-link">
+        <span class="glyphicon glyphicon-user"></span>
+      </a>
+    </p>
+  </div>
+</nav>

@@ -1,0 +1,120 @@
+
+<!--Intro Section-->
+<div class="view intro-2 hm-gradient">
+  <div class="container-size-login container"></div>
+  <div class="full-bg-img">
+
+    <div class="container flex-center">
+      <div class="d-flex align-items-center content-height">
+        <div class="row flex-center pt-5 mt-3">
+          <div class="col-md-6 text-center text-md-left mb-5">
+            <div class="container-small">   </div>
+            <div class="row">
+              <div class="col-9">          </div>
+              <div class="white-text">
+                <h1 class="h1-responsive font-weight-bold font-kind-login">Sign up </h1>
+                <h1 class="h1-responsive font-weight-bold font-kind-login"> right now! </h1>
+                <hr class="hr-light">
+                <br>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4 offset-xl-2">
+            <!--Form-->
+            <!--<div class="card wow fadeInRight" data-wow-delay="0.3s">-->
+              <!--<div class="card-body">-->
+                <!--&lt;!&ndash;Header&ndash;&gt;-->
+                <div class="">
+                  <h3 class="white-text login-title"><i class="fa fa-user white-text"></i>Register</h3>
+                  <!--<hr class="hr-light">-->
+                  <div *ngIf="errorFlag" class="alert alert-danger">
+                    {{errorMsg}}
+                  </div>
+                  <div class="md-form">
+                    <label for="form3" class="active">UserName</label>
+                    <input [(ngModel)]="user.username" type="text" id="form3" class="form-control"
+                           placeholder="username" [ngModelOptions]="{standalone: true}">
+                  </div>
+                  <div class="md-form">
+                    <label for="form2" class="active">Password</label>
+                    <input [(ngModel)]="user.password" type="password" id="form2" class="form-control"
+                           placeholder="password" [ngModelOptions]="{standalone: true}">
+                  </div>
+                  <div class="md-form">
+                    <label for="form2" class="active">Verify Password</label>
+                    <input [(ngModel)]="verifyPwd" type="password" id="form5" class="form-control"
+                           placeholder="verify password" [ngModelOptions]="{standalone: true}">
+                  </div>
+                  <div class="md-form">
+                    <label class="active">UserType</label>
+                    <select class="select-option custom-select form-control" required [(ngModel)]="userType" (ngModelChange)="onOptionsSelected($event)" name="usertype">
+                      <option class='option' *ngFor='let type of types' [value]="type">{{type}}</option>
+                    </select>
+                  </div>
+                <br/>
+                  <button class="btn btn-primary btn-block" (click)="register()">Register</button>
+                  <button class="btn btn-danger  btn-block" routerLink="/login">Cancel</button>
+                </div>
+
+                <!--<form>-->
+                  <!--<label for="username">Username</label>-->
+                  <!--<input [(ngModel)]="user.username" type="text" class="form-control" id="username" placeholder="username" [ngModelOptions]="{standalone: true}"/>-->
+
+                  <!--<label for="password">Password</label>-->
+                  <!--<input [(ngModel)]="user.password" type="password" class="form-control" id="password" placeholder="password" [ngModelOptions]="{standalone: true}"/>-->
+
+                  <!--<label for="verifyPassword">Verify Password</label>-->
+                  <!--<input [(ngModel)]="verifyPwd" type="password" class="form-control" id="verifyPassword" placeholder="verify password" [ngModelOptions]="{standalone: true}"/>-->
+
+                  <!--<label for="usertype">UserType</label>-->
+                  <!--&lt;!&ndash;<input [(ngModel)]="user.userType" type="text" class="form-control" id="usertype" placeholder="UserType" [ngModelOptions]="{standalone: true}"/>&ndash;&gt;-->
+                  <!--<select [(ngModel)]="user.userType" id="usertype" class="form-control custom-select">-->
+                    <!--<option [(ngModel)]="user.userType" value="0" disabled selected>Select Your User Type</option>-->
+                    <!--<option [(ngModel)]="user.userType" value="owner">owner</option>-->
+                    <!--<option [(ngModel)]="user.userType" value="customer">customer</option>-->
+                    <!--<option [(ngModel)]="user.userType" value="professional">professional</option>-->
+                  <!--</select>-->
+
+                  <!--<br/>-->
+                  <!--<button class="btn btn-primary btn-block" (click)="register()">Register</button>-->
+                  <!--<button class="btn btn-danger  btn-block" routerLink="/login">Cancel</button>-->
+                <!--</form>-->
+
+                <div class="text-center">
+                  <hr class="hr-light mb-3 mt-4">
+
+                  <div class="inline-ul text-center d-flex justify-content-center">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!--/.Form-->
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--</div>-->
+<!--</div>-->
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-text pull-left">
+      <a routerLink="/search">
+      <span class="glyphicon glyphicon glyphicon-home color-black">
+      </span>
+      </a>
+    </div>
+    <p class="navbar-text pull-right">
+      <a routerLink="/faq" class="navbar-link">Frequently asked Question
+        <!--<span class="glyphicon glyphicon-user"></span>-->
+      </a>
+      <a routerLink="/profile" class="navbar-link">
+        <span class="glyphicon glyphicon-user"></span>
+      </a>
+    </p>
+
+
+  </div>
+</nav>

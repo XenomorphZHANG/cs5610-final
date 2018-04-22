@@ -1,0 +1,85 @@
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid row">
+
+    <div class="navbar-text pull-left">
+      <a routerLink=".." class="cl-text-black cl-icon-padding">
+          <span class="glyphicon glyphicon-chevron-left">
+          </span>
+      </a>
+    </div>
+    <div class="navbar-text pull-right">
+      <a (click)="createFaq()"
+         class="cl-icon-padding cl-text-black">
+        <span class="glyphicon glyphicon-ok"></span>
+      </a>
+    </div>
+    <a class="navbar-brand cl-text-white cl-text-bold">
+      Frequently Asked Question
+    </a>
+  </div>
+</nav>
+
+<!--<nav class="navbar navbar-default navbar-fixed-top">-->
+  <!--<div class="container-fluid row">-->
+
+    <!--<div class="navbar-text pull-left">-->
+      <!--<a routerLink=".." class="cl-text-black cl-icon-padding">-->
+          <!--<span class="glyphicon glyphicon-chevron-left">-->
+          <!--</span>-->
+      <!--</a>-->
+    <!--</div>-->
+    <!--<div class="navbar-text pull-right">-->
+      <!--<a (click)="createFaq()" class="cl-icon-padding cl-text-black">-->
+          <!--<span class="glyphicon glyphicon-ok">-->
+          <!--</span>-->
+      <!--</a>-->
+    <!--</div>-->
+    <!--<a class="navbar-brand cl-text-white cl-text-bold" routerLink="/user/faq/new">-->
+      <!--New Page-->
+    <!--</a>-->
+  <!--</div>-->
+<!--</nav>-->
+
+<div class="showcase-faq">
+  <div class="container-box-faq">
+    <div class="scrollBody scroll-body">
+    <ul class="list-group cl-list-group-borderless">
+      <li class="list-group-item-header cl-list-item-borderless">
+        <p>New Frequent Asked Questions
+        </p>
+      </li>
+      <form>
+        <div class="form-group">
+          <label for="faq-question" class="lable-size">Question</label>
+          <textarea [(ngModel)]="question" type="text" class="form-control" id="faq-question" placeholder="Question"
+                 [ngModelOptions]="{standalone: true}">
+          </textarea>
+        </div>
+      </form>
+    </ul>
+    </div>
+</div>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-text pull-left">
+      <a routerLink="/search">
+      <span class="glyphicon glyphicon glyphicon-home color-black">
+      </span>
+      </a>
+    </div>
+    <p class="navbar-text pull-right">
+      <a routerLink="/faq" class="navbar-link">Frequently asked Question
+        <!--<span class="glyphicon glyphicon-user"></span>-->
+      </a>
+      <a routerLink="/profile" class="navbar-link">
+        <span class="glyphicon glyphicon-user"></span>
+      </a>
+    </p>
+
+
+  </div>
+</nav>

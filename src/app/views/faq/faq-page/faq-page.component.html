@@ -1,0 +1,85 @@
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid row">
+
+    <div class="navbar-text pull-left">
+      <a routerLink="../" class="cl-text-black cl-icon-padding">
+          <span class="glyphicon glyphicon-chevron-left">
+          </span>
+      </a>
+    </div>
+    <div class="navbar-text pull-right">
+      <a routerLink="/user/faq/new" *ngIf="user.userType == 'support'"
+         class="navbar-link pull-right cl-text-white cl-icon-padding">
+          <span class="glyphicon glyphicon-plus">
+          </span>
+      </a>
+    </div>
+    <a class="navbar-brand cl-text-white cl-text-bold" routerLink="/user/faq">
+      Frequently asked Questions
+    </a>
+  </div>
+</nav>
+
+<div class="showcase-faq">
+  <div class="container-box-faq">
+    <!--<div id="scrollBody" style="position:absolute;top:0;bottom:0;left:0;right:0;overflow:scroll;height:100%;">-->
+    <!--<div class="container-fluid">-->
+    <div class="scrollBody scroll-body">
+<!--<div class="container-fluid">-->
+  <div class="form-group container-position-faq">
+    <label for="faq-question">Question</label>
+    <input [(ngModel)]="faq.question" type="text" class="form-control" id="faq-question" placeholder="Question"
+           [ngModelOptions]="{standalone: true}">
+  </div>
+
+
+  <div class="form-group container-position-faq">
+    <label class="lable-size">Add New Follow Up</label>
+    <textarea [(ngModel)]="content" type="text" class="form-control" id="faq-followups" placeholder="Follow up"
+    [ngModelOptions]="{standalone: true}">
+    </textarea>
+    <br/>
+    <ul class="list-group cl-list-group-borderless" *ngFor="let followup of faq.followups; let i=index">
+      <li class="list-group-item-element-faq cl-list-item-borderless">
+        Follow Up&nbsp;{{i+1}}:&nbsp;{{followup}}
+        <!--<div [ngSwitch]="user.userType">-->
+          <!--<div *ngSwitchCase="'support'">-->
+            <!--<a routerLink="/user/faq/{{faq._id}}">-->
+              <!--<span class="glyphicon glyphicon-cog pull-right"></span>-->
+            <!--</a>-->
+          <!--</div>-->
+        <!--</div>-->
+      </li>
+
+    </ul>
+    <!--<br/>-->
+    <a (click)="addFollowUp()" class="btn btn-primary">Add</a>
+  </div>
+
+</div>
+  </div>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-text pull-left">
+      <a routerLink="/search">
+      <span class="glyphicon glyphicon glyphicon-home color-black">
+      </span>
+      </a>
+    </div>
+    <p class="navbar-text pull-right">
+      <a routerLink="/faq" class="navbar-link">Frequently asked Question
+        <!--<span class="glyphicon glyphicon-user"></span>-->
+      </a>
+      <a routerLink="/profile" class="navbar-link">
+        <span class="glyphicon glyphicon-user"></span>
+      </a>
+    </p>
+
+
+  </div>
+</nav>
+

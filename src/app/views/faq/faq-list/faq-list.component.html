@@ -1,0 +1,103 @@
+
+<!--<nav class="navbar navbar-fixed-top navbar-default">-->
+  <!--<div class="content-fluid navbar-text pull-left">-->
+    <!--<a routerLink=".." class="navbar-link header-font">-->
+      <!--<span class="glyphicon glyphicon-chevron-left ">-->
+      <!--</span>-->
+    <!--</a>-->
+  <!--</div>-->
+  <!--&lt;!&ndash;<div class="navbar-text header-position">&ndash;&gt;-->
+    <!--&lt;!&ndash;<a routerLink="/search" class="navbar-link header-font">FoodPhilia</a>&ndash;&gt;-->
+  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+      <!--<a routerLink="/faq/new" *ngIf="user.userType == 'support'"-->
+         <!--class="navbar-link navbar-text pull-right cl-text-white cl-icon-padding">-->
+        <!--<span class="glyphicon glyphicon-plus icon-size"></span>-->
+      <!--</a>-->
+<!--</nav>-->
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid row">
+
+    <div class="navbar-text pull-left">
+      <a routerLink=".." class="cl-text-black cl-icon-padding">
+          <span class="glyphicon glyphicon-chevron-left">
+          </span>
+      </a>
+    </div>
+    <div class="navbar-text pull-right">
+      <a routerLink="/faq/new" *ngIf="user.userType == 'support'"
+         class="cl-icon-padding cl-text-black">
+        <span class="glyphicon glyphicon-plus"></span>
+      </a>
+    </div>
+    <a class="navbar-brand cl-text-white cl-text-bold">
+      Frequently Asked Question
+    </a>
+  </div>
+</nav>
+
+<div class="showcase-faq">
+  <div class="container-box-faq">
+    <!--<div id="scrollBody" style="position:absolute;top:0;bottom:0;left:0;right:0;overflow:scroll;height:100%;">-->
+    <!--<div class="container-fluid">-->
+    <div class="scrollBody scroll-body">
+      <ul class="list-group cl-list-group-borderless move-li">
+        <li class="list-group-item-header cl-list-item-borderless">
+          <p>Frequent Asked Questions
+          </p>
+        </li>
+        <li class="list-group-item-element cl-list-item-borderless" *ngFor="let faq of faqs">
+          <a routerLink="/faq/{{faq._id}}/page">{{faq.question}}
+          </a>
+          <a routerLink="/faq/{{faq._id}}" *ngIf="user.userType == 'support'">
+            <span class="glyphicon glyphicon-cog pull-right glyphicon-position"></span>
+          </a>
+        </li>
+      </ul>
+
+      <!--<ul class="list-group cl-list-group-borderless move-li" *ngFor="let faq of faqs">-->
+        <!--<li class="list-group-item-element cl-list-item-borderless">-->
+          <!--<a routerLink="/user/faq/{{faq._id}}/page">{{faq.question}}-->
+          <!--</a>-->
+          <!--<div [ngSwitch]="user.userType">-->
+            <!--<div *ngSwitchCase="'support'">-->
+              <!--<a routerLink="/user/faq/{{faq._id}}">-->
+                <!--<span class="glyphicon glyphicon-cog pull-right glyphicon-position"></span>-->
+              <!--</a>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</li>-->
+
+      <!--</ul>-->
+    <!--</div>-->
+    <!--<script>-->
+      <!--function scrollToTop(){-->
+        <!--document.getElementById('scrollBody').scrollTop = 1200;-->
+      <!--}-->
+    <!--</script>-->
+  </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-text pull-left">
+      <a routerLink="/search">
+      <span class="glyphicon glyphicon glyphicon-home color-black">
+      </span>
+      </a>
+    </div>
+    <p class="navbar-text pull-right">
+      <a routerLink="/faq" class="navbar-link">Frequently asked Question
+        <!--<span class="glyphicon glyphicon-user"></span>-->
+      </a>
+      <a routerLink="/profile" class="navbar-link">
+        <span class="glyphicon glyphicon-user"></span>
+      </a>
+    </p>
+
+
+  </div>
+</nav>

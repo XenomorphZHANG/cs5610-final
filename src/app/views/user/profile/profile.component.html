@@ -1,0 +1,161 @@
+<!--<nav class="navbar navbar-fixed-top navbar-default">-->
+  <!--<div class="content-fluid navbar-text pull-left">-->
+    <!--<a routerLink=".." class="navbar-link header-font">-->
+      <!--<span class="glyphicon glyphicon-chevron-left">-->
+      <!--</span>-->
+    <!--</a>-->
+  <!--</div>-->
+  <!--<div class="content-fluid navbar-text pull-left">-->
+    <!--<a routerLink="/search" class="navbar-link header-font">FoodPhilia</a>-->
+
+  <!--</div>-->
+  <!--&lt;!&ndash;<div class="container-fluid">&ndash;&gt;-->
+    <!--&lt;!&ndash;<a class="cl-text-white navbar-brand cl-text-bold" routerLink="/profile/{{user._id}}">&ndash;&gt;-->
+      <!--&lt;!&ndash;Profile&ndash;&gt;-->
+    <!--&lt;!&ndash;</a>&ndash;&gt;-->
+    <!--<a routerLink="/profile/{{user._id}}" (click)="updateUser()" class="navbar-link navbar-text pull-right cl-text-white cl-icon-padding">-->
+      <!--<span class="glyphicon glyphicon-ok icon-size"></span>-->
+    <!--</a>-->
+  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--</nav>-->
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid row">
+
+    <div class="navbar-text pull-left">
+      <a routerLink="/search" class="cl-text-black cl-icon-padding">
+          <span class="glyphicon glyphicon-chevron-left">
+          </span>
+      </a>
+    </div>
+    <div class="navbar-text pull-right">
+      <a routerLink="/profile/{{user._id}}" (click)="updateUser()" class="cl-icon-padding cl-text-black">
+        <span class="glyphicon glyphicon-ok"></span>
+      </a>
+    </div>
+    <a class="navbar-brand cl-text-white cl-text-bold header-font-profile" routerLink="/rst">
+      FoodPhilia
+    </a>
+  </div>
+</nav>
+
+<div class="showcase">
+  <div class="profile-box">
+    <!--<div class="row">-->
+      <!---->
+    <!--</div>-->
+    <!--<img src="http://iconshow.me/media/images/ui/ios7-icons/png/256/contact.png"-->
+         <!--class="user-icon-profile">-->
+    <h1 class="profile-title">Profile</h1>
+
+  <!-- generate message when updated -->
+  <div *ngIf="updatedFlag" class="alert alert-success">
+    {{updatedMsg}}
+  </div>
+
+  <!--<div class="alert alert-info">-->
+    <!--Update button is on upper left.-->
+  <!--</div>-->
+
+  <!--<h4> user: {{user.username}}<br/>-->
+    <!--user id: {{user._id}}<br/>-->
+    <!--create date: {{user.dateCreated}}<br/>-->
+  <!--</h4>-->
+
+    <div class="move">
+  <form>
+    <label for="username" class="white-color">Username</label>
+    <input [(ngModel)]="user.username" type="text" class="form-control" id="username" placeholder="username" [ngModelOptions]="{standalone: true}"/>
+
+    <label for="firstname" class="white-color">First Name</label>
+    <input [(ngModel)]="user.firstname" type="text" class="form-control" id="firstname" placeholder="first name" [ngModelOptions]="{standalone: true}"/>
+
+    <label for="lastname" class="white-color">Last Name</label>
+    <input [(ngModel)]="user.lastname" type="text" class="form-control" id="lastname" placeholder="last name" [ngModelOptions]="{standalone: true}"/>
+
+    <label for="email" class="white-color">Email</label>
+    <input [(ngModel)]="user.email" type="text" class="form-control" id="email" placeholder="email" [ngModelOptions]="{standalone: true}"/>
+
+    <label for="usertype" class="white-color">UserType</label>
+    <input [(ngModel)]="user.userType" type="text" class="form-control" id="usertype" placeholder="user type" [ngModelOptions]="{standalone: true}"/>
+
+    <br/>
+    <div [ngSwitch]="user.userType">
+      <div *ngSwitchCase="'owner'">
+        <div align="center">
+        <button routerLink="/rst" class="btn btn-primary btn-color btn-primary">Your Restaurants</button>
+        <button routerLink="/login" (click)="deleteUser()" class="btn btn-danger btn-color btn-block">Delete User</button>
+        <button (click)="logout()" class="btn btn-danger btn-color btn-block">Log Out</button>
+        </div>
+      </div>
+    </div>
+    <div [ngSwitch]="user.userType">
+      <div *ngSwitchCase="'customer'">
+        <div align="center">
+        <button routerLink="/search" class="btn btn-primary btn-color btn-block">Search</button>
+        <button routerLink="/login" (click)="deleteUser()" class="btn btn-danger btn-color btn-block">Delete User</button>
+        <button (click)="logout()" class="btn btn-danger btn-color btn-block">Log Out</button>
+        </div>
+      </div>
+    </div>
+    <div [ngSwitch]="user.userType">
+      <div *ngSwitchCase="'support'">
+        <div align="center">
+        <button routerLink="/faq" class="btn btn-primary btn-color btn-block">FAQ</button>
+        <button routerLink="/login" (click)="deleteUser()" class="btn btn-danger btn-color btn-block">Delete User</button>
+        <button (click)="logout()" class="btn btn-danger btn-color btn-block">Log Out</button>
+        </div>
+      </div>
+    </div>
+    <div [ngSwitch]="user.userType">
+      <div *ngSwitchCase="'professional'">
+        <div align="center">
+        <button routerLink="/search" class="btn btn-primary btn-color btn-block">Search</button>
+        <button routerLink="/blog" class="btn btn-primary btn-color btn-block">Your Blogs</button>
+        <button routerLink="/login" (click)="deleteUser()" class="btn btn-danger btn-color btn-block">Delete User</button>
+        <button (click)="logout()" class="btn btn-danger btn-color btn-block">Log Out</button>
+        </div>
+      </div>
+    </div>
+    <div [ngSwitch]="user.userType">
+      <div *ngSwitchCase="'admin'">
+        <div align="center">
+        <button routerLink="/search" class="btn btn-primary btn-color btn-block">Search</button>
+        <button routerLink="/admin" class="btn btn-primary btn-color btn-block">All Users</button>
+        <button (click)="logout()" class="btn btn-danger btn-color btn-block">Log Out</button>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!user.userType">
+      <div align="center">
+      <button routerLink="/search" class="btn btn-primary btn-color btn-block">Search</button>
+      <button routerLink="/login" (click)="deleteUser()" class="btn btn-danger btn-color btn-block">Delete User</button>
+      <button (click)="logout()" class="btn btn-danger btn-color btn-block">Log Out</button>
+      </div>
+    </div>
+  </form>
+</div>
+</div>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-text pull-left">
+      <a routerLink="/search">
+      <span class="glyphicon glyphicon glyphicon-home color-black">
+      </span>
+      </a>
+    </div>
+    <p class="navbar-text pull-right">
+      <a routerLink="/faq" class="navbar-link">Frequently asked Question
+        <!--<span class="glyphicon glyphicon-user"></span>-->
+      </a>
+      <a routerLink="/profile" class="navbar-link">
+        <span class="glyphicon glyphicon-user"></span>
+      </a>
+    </p>
+
+
+  </div>
+</nav>
+
